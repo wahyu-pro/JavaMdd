@@ -13,12 +13,12 @@ public class NumberOne {
     }
 
     public static void penjumlahan(int x, int y){
-        int result = x + y;
+        int result = Math.addExact(x, y);
         System.out.println("Penjumlahan " + result);
     }
 
     public static void pengurangan(int x, int y){
-        int result = x - y;
+        int result = Math.subtractExact(x, y);
         System.out.println("pengurangan " + result);
     }
 
@@ -35,12 +35,12 @@ public class NumberOne {
     }
 
     public static void pembagian(int x, int y){
-        int result = x / y;
+        int result = Math.floorDiv(x, y);
         System.out.println("pembagian " + result);
     }
 
     public static void perkalian(int x, int y){
-        int result = x * y;
+        int result = Math.multiplyExact(x, y);
         System.out.println("perkalian " + result);
     }
 }
