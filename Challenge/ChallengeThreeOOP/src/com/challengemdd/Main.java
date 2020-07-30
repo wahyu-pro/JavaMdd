@@ -3,6 +3,7 @@ package com.challengemdd;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Hewan reptil = new Hewan("buaya", 2, "vertebatra");
+        reptil.profileHewan();
     }
 }
