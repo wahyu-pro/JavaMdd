@@ -2,6 +2,7 @@ package com.challengemdd;
 
 public class Hewan {
     String nama,jenis;
+    int umur;
 
     public Hewan(String nama, int umur, String jenis) {
         this.nama = nama;
@@ -10,11 +11,12 @@ public class Hewan {
     }
 
     public void profileHewan(){
-        System.out.println("Profile hewan");
-        System.out.print("Nama :" + nama + "\nUmur :" + umur + "\nJenis :" + jenis);
+        System.out.println("--- Profile hewan ---");
+        System.out.println("Nama :" + nama + "\nUmur :" + umur + "\nJenis :" + jenis);
     }
 
     public void statusHewan(){
+        System.out.println("--- Status hewan ---");
         if (umur < 1) System.out.println("belum siap diternakan");
         else if (umur >= 1 && umur <= 4) System.out.println("siap diternakan");
         else if (umur > 5) System.out.println("Hewan sudah tua");
@@ -47,5 +49,4 @@ public class Hewan {
         this.umur = umur;
     }
 
-    int umur;
 }
