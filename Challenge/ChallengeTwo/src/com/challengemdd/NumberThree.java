@@ -1,7 +1,6 @@
 package com.challengemdd;
 
 import java.util.List;
-
 public class NumberThree {
     public static void main(String[] args) {
         var list = List.of(
