@@ -10,16 +10,16 @@ public class Hewan {
         this.jenis = jenis;
     }
 
-    public void profileHewan(){
+    public String profileHewan(){
         System.out.println("--- Profile hewan ---");
-        System.out.println("Nama :" + nama + "\nUmur :" + umur + "\nJenis :" + jenis);
+        return "Nama :" + nama + "\nUmur :" + umur + "\nJenis :" + jenis;
     }
 
-    public void statusHewan(){
+    public String statusHewan(){
         System.out.println("--- Status hewan ---");
-        if (umur < 1) System.out.println("belum siap diternakan");
-        else if (umur >= 1 && umur <= 4) System.out.println("siap diternakan");
-        else if (umur > 5) System.out.println("Hewan sudah tua");
+        if (umur < 1) return "belum siap diternakan";
+        else if (umur <= 4) return "siap diternakan";
+        else return "Hewan sudah tua";
     }
 
     public Hewan() {

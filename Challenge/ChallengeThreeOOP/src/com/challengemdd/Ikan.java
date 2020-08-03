@@ -3,11 +3,8 @@ package com.challengemdd;
 public class Ikan extends Hewan{
 
     public Ikan (String nama, int umur, String jenis){
-        super.nama = nama;
-        super.umur = umur;
-        super.jenis = jenis;
+        super(nama, umur, jenis);
     }
-
 
     // Overloading
     public Integer hitungBerat (int bobot){
