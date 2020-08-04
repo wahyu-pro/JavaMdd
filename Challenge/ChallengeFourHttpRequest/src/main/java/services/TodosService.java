@@ -7,4 +7,7 @@ import retrofit2.http.GET;
 public interface TodosService {
     @GET("todos")
     Call<Todos> getAllTodos();
+
+//    @GET("todos/{id}")
+//    Call<>
 }
