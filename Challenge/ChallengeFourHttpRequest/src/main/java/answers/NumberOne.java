@@ -124,12 +124,13 @@ public class NumberOne {
             });
 
             // Delete User
-            Call<ResponseBody> calldel = UserClient.userService().deleteUser(2);
+            var id = 2;
+            Call<ResponseBody> calldel = UserClient.userService().deleteUser(id);
             calldel.enqueue(new Callback<ResponseBody>() {
                 @Override
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     if (response.code() >= 200 & response.code() <= 299) {
-                        System.out.println("User dengan id " + 2 + " berhasil dihapus");
+                        System.out.println("User dengan id " + id + " berhasil dihapus");
                     } else {
                         System.out.println("Maaf response gagal dengan kode " +
                                 response.code());

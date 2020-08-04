@@ -62,12 +62,12 @@ public class Data{
 	@Override
  	public String toString(){
 		return 
-			"{" +
-			" \"createdAt\" = '\"" + createdAt + '\"' +
-			", \"task\" = '\"" + task + '\"' +
-			", \"id\" = '\"" + id + '\"' +
-			", \"status\" = '\"" + status + '\"' +
-			", \"updatedAt\" = '\"" + updatedAt + '\"' +
+			"Data{" + 
+			"createdAt = '" + createdAt + '\'' + 
+			",task = '" + task + '\'' + 
+			",id = '" + id + '\'' + 
+			",status = '" + status + '\'' + 
+			",updatedAt = '" + updatedAt + '\'' + 
 			"}";
 		}
 }
