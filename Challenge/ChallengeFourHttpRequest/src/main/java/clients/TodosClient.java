@@ -1,8 +1,6 @@
-package Clients;
+package clients;
 
-import Models.Todos.Todos;
-import Services.TodosService;
-import Services.UserService;
+import services.TodosService;
 import com.google.gson.GsonBuilder;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -10,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class TodosClient {
     public static TodosService todosService(){
         var retrofit = new Retrofit.Builder()
-                .baseUrl("http://jsonplaceholder.typicode.com/")
+                .baseUrl("https://online-course-todo.herokuapp.com/api/v1/")
                 .addConverterFactory(
                         GsonConverterFactory.create(
                                 new GsonBuilder().setLenient().create()

@@ -1,17 +1,17 @@
-package Models.Todos;
+package models.PostsAndUsers;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Todos{
+public class Post{
 
 	@SerializedName("id")
 	private int id;
 
-	@SerializedName("completed")
-	private boolean completed;
-
 	@SerializedName("title")
 	private String title;
+
+	@SerializedName("body")
+	private String body;
 
 	@SerializedName("userId")
 	private int userId;
@@ -24,20 +24,20 @@ public class Todos{
 		return id;
 	}
 
-	public void setCompleted(boolean completed){
-		this.completed = completed;
-	}
-
-	public boolean isCompleted(){
-		return completed;
-	}
-
 	public void setTitle(String title){
 		this.title = title;
 	}
 
 	public String getTitle(){
 		return title;
+	}
+
+	public void setBody(String body){
+		this.body = body;
+	}
+
+	public String getBody(){
+		return body;
 	}
 
 	public void setUserId(int userId){
@@ -53,8 +53,8 @@ public class Todos{
 		return 
 			"{" +
 			" \"id\" = '\"" + id + '\"' +
-			", \"completed\" = '\"" + completed + '\"' +
 			", \"title\" = '\"" + title + '\"' +
+			", \"body\" = '\"" + body + '\"' +
 			", \"userId\" = '\"" + userId + '\"' +
 			"}";
 		}

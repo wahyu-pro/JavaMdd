@@ -1,14 +1,13 @@
-package Clients;
+package clients;
 
-import Services.UserService;
 import com.google.gson.GsonBuilder;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class UserClient {
-    public static UserService userService(){
+public class ApiClient {
+    public static <T> T client(Class<T> service) {
         var retrofit = new Retrofit.Builder()
-                .baseUrl(" https://reqres.in/api/")
+                .baseUrl("https://jsonplaceholder.typicode.com/")
                 .addConverterFactory(
                         GsonConverterFactory.create(
                                 new GsonBuilder().setLenient().create()
@@ -16,6 +15,6 @@ public class UserClient {
                 )
                 .build();
 
-        return retrofit.create(UserService.class);
+        return retrofit.create(service);
     }
 }

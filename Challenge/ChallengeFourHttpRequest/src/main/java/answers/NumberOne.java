@@ -1,9 +1,10 @@
-package Answers;
+package answers;
 
-import Clients.UserClient;
-import Models.Users.PostUserModel;
-import Models.Users.UserModel;
-import Models.Users.UsersModel;
+import clients.UserClient;
+import models.Users.PostUserModel;
+import models.Users.UpdateUserModel;
+import models.Users.UserModel;
+import models.Users.UsersModel;
 import com.google.gson.Gson;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -12,7 +13,6 @@ import retrofit2.Response;
 
 public class NumberOne {
     public static void main(String[] args) {
-        try {
 
             // Get All User
             UserClient.userService().getUser(2).enqueue(new Callback<UsersModel>() {
@@ -77,28 +77,51 @@ public class NumberOne {
                 }
             });
 
-            // Update User
-//            UpdateUserModel put = new UpdateUserModel();
-//            put.setName("wahyu");
-//            put.setJob("Programmer");
-//            Call<UpdateUserModel> callup = UserClient.userService().updateUser(2, put);
-//            callup.enqueue(new Callback<UpdateUserModel>() {
-//                @Override
-//                public void onResponse(Call<UpdateUserModel> call, Response<UpdateUserModel> response) {
-//                    if (response.code() >= 200 & response.code() <= 299) {
-//                        System.out.println(new Gson().toJson(response.body()));
-//                        System.exit(0);
-//                    } else {
-//                        System.out.println("Maaf response gagal dengan kode " +
-//                                response.code());
-//                    }
-//                }
-//
-//                @Override
-//                public void onFailure(Call<UpdateUserModel> call, Throwable t) {
-//                    System.out.println(t.getMessage());
-//                }
-//            }
+            // Update User with put
+            UpdateUserModel put = new UpdateUserModel();
+            put.setName("wahyu");
+            put.setJob("Programmer");
+            Call<UpdateUserModel> callup = UserClient.userService().putUser(2, put);
+            callup.enqueue(new Callback<UpdateUserModel>() {
+                @Override
+                public void onResponse(Call<UpdateUserModel> call, Response<UpdateUserModel> response) {
+                    if (response.code() >= 200 & response.code() <= 299) {
+                        System.out.println(new Gson().toJson(response.body()));
+                        System.exit(0);
+                    } else {
+                        System.out.println("Maaf response gagal dengan kode " +
+                                response.code());
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<UpdateUserModel> call, Throwable t) {
+                    System.out.println(t.getMessage());
+                }
+            });
+
+            // update user with patch
+            UpdateUserModel patch = new UpdateUserModel();
+            patch.setName("wahyu");
+            patch.setJob("Programmer");
+            Call<UpdateUserModel> callpatch = UserClient.userService().patchUser(2, patch);
+            callpatch.enqueue(new Callback<UpdateUserModel>() {
+                @Override
+                public void onResponse(Call<UpdateUserModel> call, Response<UpdateUserModel> response) {
+                    if (response.code() >= 200 & response.code() <= 299) {
+                        System.out.println(new Gson().toJson(response.body()));
+                        System.exit(0);
+                    } else {
+                        System.out.println("Maaf response gagal dengan kode " +
+                                response.code());
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<UpdateUserModel> call, Throwable t) {
+                    System.out.println(t.getMessage());
+                }
+            });
 
             // Delete User
             Call<ResponseBody> calldel = UserClient.userService().deleteUser(2);
@@ -120,9 +143,7 @@ public class NumberOne {
                 }
             });
 
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
+
     }
 
 }

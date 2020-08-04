@@ -1,11 +1,10 @@
-package Services;
+package services;
 
-import Models.Todos.All;
-import Models.Todos.Todos;
+import models.Todos.Todos;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface TodosService {
     @GET("todos")
-    Call<All> getAllTodos();
+    Call<Todos> getAllTodos();
 }
