@@ -26,7 +26,7 @@ public class NumberThree {
                     System.out.println("Maaf response gagal dengan kode " +
                             response.code());
                 }
-                System.exit(0);
+//                System.exit(0);
             }
 
             @Override
@@ -45,7 +45,7 @@ public class NumberThree {
                     System.out.println("Maaf response gagal dengan kode " +
                             response.code());
                 }
-                System.exit(0);
+//                System.exit(0);
             }
 
             @Override
@@ -65,7 +65,7 @@ public class NumberThree {
                     System.out.println("Maaf response gagal dengan kode " +
                             response.code());
                 }
-                System.exit(0);
+//                System.exit(0);
             }
 
             @Override

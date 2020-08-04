@@ -24,7 +24,7 @@ public class NumberOne {
                         System.out.println("Maaf response gagal dengan kode " +
                                 response.code());
                     }
-                    System.exit(0);
+//                    System.exit(0);
                 }
 
                 @Override
@@ -45,7 +45,7 @@ public class NumberOne {
                         System.out.println("Maaf response gagal dengan kode " +
                                 response.code());
                     }
-                    System.exit(0);
+//                    System.exit(0);
                 }
 
                 @Override
@@ -64,7 +64,7 @@ public class NumberOne {
                 public void onResponse(Call<PostUserModel> call, Response<PostUserModel> response) {
                     if (response.code() >= 200 & response.code() <= 299) {
                         System.out.println(new Gson().toJson(response.body()));
-                        System.exit(0);
+//                        System.exit(0);
                     } else {
                         System.out.println("Maaf response gagal dengan kode " +
                                 response.code());
@@ -87,7 +87,7 @@ public class NumberOne {
                 public void onResponse(Call<UpdateUserModel> call, Response<UpdateUserModel> response) {
                     if (response.code() >= 200 & response.code() <= 299) {
                         System.out.println(new Gson().toJson(response.body()));
-                        System.exit(0);
+//                        System.exit(0);
                     } else {
                         System.out.println("Maaf response gagal dengan kode " +
                                 response.code());
@@ -110,7 +110,7 @@ public class NumberOne {
                 public void onResponse(Call<UpdateUserModel> call, Response<UpdateUserModel> response) {
                     if (response.code() >= 200 & response.code() <= 299) {
                         System.out.println(new Gson().toJson(response.body()));
-                        System.exit(0);
+//                        System.exit(0);
                     } else {
                         System.out.println("Maaf response gagal dengan kode " +
                                 response.code());
@@ -134,7 +134,7 @@ public class NumberOne {
                         System.out.println("Maaf response gagal dengan kode " +
                                 response.code());
                     }
-                    System.exit(0);
+//                    System.exit(0);
                 }
 
                 @Override
@@ -142,8 +142,6 @@ public class NumberOne {
                     System.out.println(t.getMessage());
                 }
             });
-
-
     }
 
 }
